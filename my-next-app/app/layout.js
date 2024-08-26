@@ -3,6 +3,7 @@ import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "../components/Navbar";
+import Filepath from "../components/Filepath";
 
 const ibmPlexMono = IBM_Plex_Mono({
     subsets: ["latin"],
@@ -20,8 +21,8 @@ export default function RootLayout({ children }) {
                 <link rel="#" href="#" />
             </head>
             <body className={ibmPlexMono.className}>
-                <div className="w-[700px] mt-5 mx-auto">
-                    <p>filler/f/user/</p>
+                <div className="w-[350px] min-[700px]:w-[700px] my-5 mx-auto">
+                    <Filepath />
                     <Navbar />
                     <div>{children}</div>
                 </div>

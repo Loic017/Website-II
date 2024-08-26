@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.heading1 {
+    @apply text-[2rem] font-mono border-b-2 border-gray-300 w-full mb-2;
+}
+
+.paragraph1 {
+    @apply mb-3 text-justify;
+}
+
+.link {
+    @apply hover:underline;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +42,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
