@@ -18,7 +18,7 @@ export default function Filepath() {
     console.log(printpath);
 
     return (
-        <div>
+        <div className="">
             <p className="opacity-60">{printpath}</p>
         </div>
     );

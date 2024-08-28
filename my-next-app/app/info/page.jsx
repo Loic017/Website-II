@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import frontpage from "../frontpage.png";
 
 const Page = () => {
     return (
@@ -8,7 +10,7 @@ const Page = () => {
             <p className="paragraph1">
                 <b>Hello there, I'm Loic.</b> I am a recent computer science
                 graduate. While computer science is an active hobby of mine, my
-                personal interests also include music, sport, and technology.
+                personal interests also include music, sport, and history.
             </p>
             <p className="paragraph1">
                 I have experience working with different mediums, from web
@@ -17,6 +19,10 @@ const Page = () => {
                 aim to make impactful contributions that benefit the world and
                 improve people's lives.
             </p>
+            <div className="border-l-2 pl-2 my-2 min-[700px]:w-[300px]">
+                <Image src={frontpage} alt="Banner" className="rounded-md" />
+            </div>
+
             <p className="paragraph1">
                 Currently, I am self-studying maths and machine learning. I am
                 pursuing an MPhil and aim to start a PhD in the future.

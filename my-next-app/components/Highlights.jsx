@@ -1,25 +1,13 @@
 import Link from "next/link";
 
-export default function HomePage() {
+export default function Highlights() {
     return (
-        <div className="">
-            <div className="flex flex-col my-5">
-                <h1 className="heading1"># welcome</h1>
-                <p>Hello, I'm Loic!</p>
-            </div>
-            <div className="flex flex-col  my-5">
-                <div className="flex">
-                    <h1 className="heading1 flex"># quick links</h1>
-                </div>
-            </div>
-            <div className="flex flex-col">
-                <div className="flex">
-                    <h1 className="heading1 flex"># highlights</h1>
-                </div>
-                <Link href="/home/news" className="hover:underline text-right">
-                    view all →
-                </Link>
-            </div>
+        <div className="my-5">
+            <h1 className="heading1"># highlights & news</h1>
+            <p className="paragraph1">
+                A collection of accomplishments, milestones and other notable
+                moments.
+            </p>
             <div className="flex flex-col items-center">
                 {news.map((newsItem, index) => (
                     <div

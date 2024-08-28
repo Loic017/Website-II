@@ -1,10 +1,10 @@
 import React from "react";
+import Highlights from "../../../components/Highlights";
 
 const Page = () => {
     return (
         <div>
-            <h1>Welcome to the News Page</h1>
-            {/* Add your news content here */}
+            <Highlights />
         </div>
     );
 };
