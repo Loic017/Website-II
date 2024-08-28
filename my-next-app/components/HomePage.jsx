@@ -16,7 +16,10 @@ export default function HomePage() {
                 <div className="flex">
                     <h1 className="heading1 flex"># highlights</h1>
                 </div>
-                <Link href="/home/news" className="hover:underline text-right">
+                <Link
+                    href="/home/news"
+                    className="hover:underline text-right mb-2"
+                >
                     view all →
                 </Link>
             </div>

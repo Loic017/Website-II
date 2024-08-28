@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Page = () => {
     return (
-        <div>
+        <div className="flex flex-col">
             <h1 className="heading1"># about</h1>
             <p className="paragraph1">
                 <b>Hello there, I'm Loic.</b> I am a recent computer science
@@ -55,7 +55,7 @@ const Page = () => {
             <p className="paragraph1">
                 • Check out some of my work and projects on my GitHub.
             </p>
-            <ul className="flex gap-5 justify-around">
+            <ul className="flex gap-5 justify-around mb-3">
                 <li>
                     <Link href="/info">GitHub →</Link>
                 </li>
