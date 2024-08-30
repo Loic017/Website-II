@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function HomePage() {
     return (
         <div className="">
-            <div className="flex flex-col my-5">
+            <div className="flex flex-col">
                 <h1 className="heading1"># welcome</h1>
                 <p>Hello, I'm Loic!</p>
             </div>
@@ -52,7 +52,7 @@ const news = [
                 Cardiff University for my study on{" "}
                 <a
                     href="https://blog.lorentel.com/tinyml-seizure-detection"
-                    className="underline italic"
+                    className="italic"
                 >
                     TinyML for Epileptic Seizures.
                 </a>
@@ -76,7 +76,7 @@ const news = [
                 I have won <c className="text-primary">first prize</c> in the{" "}
                 <a
                     href="https://www.agilecps.org/activities/2024-cardiff-vnu-competition"
-                    className="underline italic"
+                    className="italic"
                 >
                     Global Wales&apos; Cardiff-VNU student poster competition
                 </a>{" "}
@@ -91,7 +91,7 @@ const news = [
                 My extended abstract on{" "}
                 <a
                     href="https://blog.lorentel.com/tinyml-seizure-detection"
-                    className="underline italic"
+                    className="italic"
                 >
                     &apos;Epileptic seizure detection with Tiny Machine
                     Learning&apos;
@@ -99,7 +99,7 @@ const news = [
                 has been accepted to the{" "}
                 <a
                     href="https://www.mobiuk.org/2024/programme.html"
-                    className="underline italic"
+                    className="italic"
                 >
                     MobiUK 2024 Symposium
                 </a>

@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 <link rel="#" href="#" />
             </head>
             <body className={firaCode.className}>
-                <div className="w-[350px] min-[700px]:w-[600px] my-2 mx-auto">
+                <div className="w-[350px] min-[700px]:w-[600px] my-2 mx-auto max-[600px]:mb-24">
                     <Filepath />
                     <Navbar />
                     <div>{children}</div>

@@ -1,10 +1,10 @@
 import React from "react";
+import Archive from "../../components/Archive";
 
 const Page = () => {
     return (
         <div>
-            <h1>Welcome to My Next App!</h1>
-            <p>This is the page component.</p>
+            <Archive />
         </div>
     );
 };
