@@ -47,7 +47,7 @@ export default function Navbar() {
             </div>
             {menuOpen && (
                 <div
-                    className="min-[600px]:hidden fixed right-0 bottom-0 w-full px-10 text-right py-5 rounded-l-md border-2 border-gray-400"
+                    className="min-[600px]:hidden fixed right-0 bottom-0 px-10 text-right py-5 rounded-l-md border-2 border-gray-400"
                     style={{ backgroundColor: "rgb( 30, 32, 30)" }}
                 >
                     <div className="flex flex-col gap-7">

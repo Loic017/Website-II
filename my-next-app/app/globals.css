@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .heading1 {
-    @apply text-[2rem] font-mono border-b-[1.5px] border-gray-300 w-full mb-4 my-2 pl-2;
+    @apply text-[1.5rem] font-mono border-b-[1.5px] border-gray-300 w-full mb-4 my-2 pb-2 text-center;
 }
 
 .paragraph1 {
@@ -12,6 +12,11 @@
 
 .link {
     @apply hover:underline;
+}
+
+/* style this checkbox */
+.checkbox1 {
+    @apply mx-2 align-middle;
 }
 
 :root {

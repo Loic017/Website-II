@@ -6,18 +6,19 @@ import frontpage from "../frontpage.png";
 const Page = () => {
     return (
         <div className="flex flex-col">
-            <h1 className="heading1"># about</h1>
+            <h1 className="heading1">about</h1>
             <p className="paragraph1">
-                <b>Hello there, I'm Loic.</b> I am a recent computer science
-                graduate. While computer science is an active hobby of mine, my
-                personal interests also include music, sport, and history.
+                <b>Hello there, I&apos;m Loic.</b> I am a recent computer
+                science graduate. While computer science is an active hobby of
+                mine, my personal interests also include music, sport, and
+                history.
             </p>
             <p className="paragraph1">
                 I have experience working with different mediums, from web
                 applications to software development. My <b>primary interest</b>{" "}
                 is in machine learning, where I aspire to become a researcher. I
                 aim to make impactful contributions that benefit the world and
-                improve people's lives.
+                improve people&apos;s lives.
             </p>
             <div className="border-l-2 pl-2 my-2 min-[700px]:w-[300px]">
                 <Image src={frontpage} alt="Banner" className="rounded-md" />
@@ -27,7 +28,7 @@ const Page = () => {
                 Currently, I am self-studying maths and machine learning. I am
                 pursuing an MPhil and aim to start a PhD in the future.
             </p>
-            <h1 className="heading1"># technologies</h1>
+            <h1 className="heading1">technologies</h1>
             <p className="paragraph1">
                 While I am continuously learning new technologies, the following
                 list includes some of the <i>key</i> technologies I have worked
@@ -53,10 +54,10 @@ const Page = () => {
                     <li>Tailwind</li>
                 </ul>
             </p>
-            <h1 className="heading1"># links</h1>
+            <h1 className="heading1">links</h1>
             <p className="paragraph1">
-                • Contact me via email at "reachloic@gmail.com" or messaged on
-                LinkedIn.
+                • Contact me via email at &quot;reachloic@gmail.com&quot; or
+                messaged on LinkedIn.
             </p>
             <p className="paragraph1">
                 • Check out some of my work and projects on my GitHub.

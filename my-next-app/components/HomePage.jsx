@@ -4,33 +4,32 @@ export default function HomePage() {
     return (
         <div className="">
             <div className="flex flex-col">
-                <h1 className="heading1"># welcome</h1>
-                <p>Hello, I'm Loic!</p>
+                <h1 className="heading1">welcome</h1>
+                <p>Hello, I&apos;m Loic!</p>
             </div>
             <div className="flex flex-col  my-5">
                 <div className="flex">
-                    <h1 className="heading1 flex"># quick links</h1>
+                    <h1 className="heading1">quick links</h1>
                 </div>
             </div>
             <div className="flex flex-col">
                 <div className="flex">
-                    <h1 className="heading1 flex"># highlights</h1>
+                    <h1 className="heading1">highlights</h1>
                 </div>
                 <Link href="/home/news" className="hover:underline text-right">
                     view all →
                 </Link>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col  gap-2 items-center">
                 {news.map((newsItem, index) => (
-                    <div
-                        key={index}
-                        className="flex flex-col items-center my-2 text-justify"
-                    >
+                    <div key={index} className="flex flex-col text-justify">
                         <p>
-                            <b className="paragraph1">{newsItem.date}</b> ~{" "}
+                            <b className="paragraph1">• {newsItem.date}</b>
+                            {/* {newsItem.text} */}
+                        </p>
+                        <p className="paragraph1 border-b-2 border-gray-600 pb-2">
                             {newsItem.text}
                         </p>
-                        {/* <p className="paragraph1">{newsItem.text}</p> */}
                     </div>
                 ))}
             </div>
@@ -52,7 +51,7 @@ const news = [
                 Cardiff University for my study on{" "}
                 <a
                     href="https://blog.lorentel.com/tinyml-seizure-detection"
-                    className="italic"
+                    className="underline"
                 >
                     TinyML for Epileptic Seizures.
                 </a>
@@ -76,7 +75,7 @@ const news = [
                 I have won <c className="text-primary">first prize</c> in the{" "}
                 <a
                     href="https://www.agilecps.org/activities/2024-cardiff-vnu-competition"
-                    className="italic"
+                    className="underline"
                 >
                     Global Wales&apos; Cardiff-VNU student poster competition
                 </a>{" "}
@@ -91,7 +90,7 @@ const news = [
                 My extended abstract on{" "}
                 <a
                     href="https://blog.lorentel.com/tinyml-seizure-detection"
-                    className="italic"
+                    className="underline"
                 >
                     &apos;Epileptic seizure detection with Tiny Machine
                     Learning&apos;
@@ -99,7 +98,7 @@ const news = [
                 has been accepted to the{" "}
                 <a
                     href="https://www.mobiuk.org/2024/programme.html"
-                    className="italic"
+                    className="underline"
                 >
                     MobiUK 2024 Symposium
                 </a>
