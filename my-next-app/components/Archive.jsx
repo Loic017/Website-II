@@ -3,7 +3,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Archive = () => {
+const Archive = () => {-
     const [tagsOpen, setTagsOpen] = useState(false);
 
     const toggleTags = () => {
@@ -36,7 +36,6 @@ const Archive = () => {
                         </option>
                     </select>
                 </div>
-                {/* toggle tags */}
                 <div className="text-right">
                     <button onClick={toggleTags}>
                         {tagsOpen ? "Hide Tags -" : "Show Tags +"}

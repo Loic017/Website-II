@@ -1,35 +1,39 @@
 import Link from "next/link";
+import Image from "next/image";
+import banner from "../app/banner.png";
 
 export default function HomePage() {
     return (
         <div className="">
             <div className="flex flex-col">
-                <h1 className="heading1">welcome</h1>
+                <Image src={banner} alt="Banner" className="rounded-sm mb-2" />
+                <h1 className="heading1">Welcome</h1>
                 <p>Hello, I&apos;m Loic!</p>
             </div>
             <div className="flex flex-col  my-5">
                 <div className="flex">
-                    <h1 className="heading1">quick links</h1>
+                    <h1 className="heading1">Quick links</h1>
                 </div>
             </div>
             <div className="flex flex-col">
                 <div className="flex">
-                    <h1 className="heading1">highlights</h1>
+                    <h1 className="heading1">Highlights</h1>
+                    <Link
+                        href="/home/news"
+                        className="hover:underline text-right"
+                    >
+                        view all →
+                    </Link>
                 </div>
-                <Link href="/home/news" className="hover:underline text-right">
-                    view all →
-                </Link>
             </div>
             <div className="flex flex-col  gap-2 items-center">
                 {news.map((newsItem, index) => (
                     <div key={index} className="flex flex-col text-justify">
                         <p>
-                            <b className="paragraph1">• {newsItem.date}</b>
+                            <b className="paragraph1">{newsItem.date}</b>
                             {/* {newsItem.text} */}
                         </p>
-                        <p className="paragraph1 border-b-2 border-gray-600 pb-2">
-                            {newsItem.text}
-                        </p>
+                        <p className="paragraph1 pb-2">{newsItem.text}</p>
                     </div>
                 ))}
             </div>
