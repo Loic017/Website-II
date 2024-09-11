@@ -6,7 +6,7 @@ import frontpage from "../frontpage.png";
 const Page = () => {
     return (
         <div className="flex flex-col">
-            <h1 className="heading1">about</h1>
+            <h1 className="heading1">about me</h1>
             <p className="paragraph1">
                 <b>Hello there, I&apos;m Loic.</b> I am a recent computer
                 science graduate. While computer science is an active hobby of

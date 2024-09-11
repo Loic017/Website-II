@@ -27,7 +27,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 const firaSans = Fira_Sans({
     subsets: ["latin"],
-    weight: ["400", "700"],
+    weight: ["300", "500"],
 });
 
 export const metadata = {
@@ -41,13 +41,15 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="#" href="#" />
             </head>
-            <body className={firaSans.className}>
-                <div className="">
-                    <div className="flex flex-col min-[700px]:flex-row">
+            <body className="font-carme">
+                <div className="h-full">
+                    <div className="">
                         <Navbar />
-                        <div className="w-[380px] min-[700px]:w-[600px] my-10 mx-auto max-[600px]:mb-24">
-                            {/* <Filepath /> */}
-                            {children}
+                        <div className="">
+                            <div className="w-[380px] min-[700px]:w-[600px] my-16 mx-auto max-[600px]:mb-24">
+                                {/* <Filepath /> */}
+                                {children}
+                            </div>
                         </div>
                     </div>
                 </div>

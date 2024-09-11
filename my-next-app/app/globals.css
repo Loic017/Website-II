@@ -2,12 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.text-14px {
+    font-size: 14px;
+}
+
+.active-link {
+    @apply bg-[#404040] rounded-md;
+}
+
+.hover-link {
+    @apply bg-[#404040] rounded-md;
+}
+
 .heading1 {
-    @apply text-[1.5rem] w-full mb-4 pb-2 font-semibold;
+    @apply text-[1.5rem] w-full mb-2 pb-2 font-semibold border-b border-white border-opacity-20;
+    font-variant: small-caps;
+}
+
+.small-caps {
+    font-variant: small-caps;
 }
 
 .nav-heading {
-    @apply text-[1rem] mb-4 pb-2 font-semibold border-b border-gray-700 w-52 pl-1;
+    @apply text-[0.8rem] mb-3 w-52 opacity-70 pl-2;
 }
 
 .paragraph1 {
@@ -19,11 +47,30 @@
 }
 
 .nav-link {
-    @apply hover:underline pl-1;
+    @apply text-[0.9rem] pl-1 font-semibold;
 }
 
 .checkbox1 {
     @apply mx-2 align-middle;
+}
+
+.shadow-right {
+    box-shadow: 2px 0 1.5px rgba(255, 255, 255, 0.1);
+}
+
+.menu-transition {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.menu-open {
+    transform: translateX(0);
+}
+
+@media (min-width: 1300px) {
+    .menu-transition {
+        transform: translateX(0);
+    }
 }
 
 :root {
@@ -54,4 +101,26 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+}
+
+/* form */
+.custom-select {
+    background-color: #1a1a1a; /* Background color */
+    padding: 2px; /* Padding */
+    border: 1px solid #333333; /* Border */
+    border-radius: 3px; /* Rounded corners */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Style the options */
+.custom-select option {
+    background-color: #1a1a1a; /* Background color */
+    color: #ffffff; /* Text color */
+}
+
+/* Style the dropdown */
+.custom-select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #555555; /* Border color on focus */
 }

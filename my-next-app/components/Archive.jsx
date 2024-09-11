@@ -3,7 +3,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Archive = () => {-
+const Archive = () => {
     const [tagsOpen, setTagsOpen] = useState(false);
 
     const toggleTags = () => {
@@ -20,20 +20,12 @@ const Archive = () => {-
             <div className="flex flex-col gap-2 border-y-[1.5px] border-y-gray-600 py-4 mt-5">
                 <div className="flex gap-5 justify-end">
                     <label htmlFor="filter">Filter by:</label>
-                    <select
-                        name="filter"
-                        id="filter"
-                        className="bg-transparent px-5"
-                    >
+                    <select name="filter" id="filter" className="custom-select">
                         <option value="recent" selected>
                             Recent
                         </option>
-                        <option value="recent" selected>
-                            Oldest
-                        </option>
-                        <option value="recent" selected>
-                            Alphabetical
-                        </option>
+                        <option value="oldest">Oldest</option>
+                        <option value="alphabetical">Alphabetical</option>
                     </select>
                 </div>
                 <div className="text-right">
@@ -69,7 +61,6 @@ const Archive = () => {-
                                 />
                                 General-Programming
                             </label>
-
                             <label>
                                 <input
                                     className="checkbox1"
