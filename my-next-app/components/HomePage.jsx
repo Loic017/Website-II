@@ -3,7 +3,7 @@ import Image from "next/image";
 import banner from "../app/banner.png";
 
 import { getAllNews } from "../utility/load_news";
-import NewsLoad from "./reusable/NewsLoad";
+import NewsLoad from "./resuable/NewsLoad";
 
 export default async function HomePage() {
     const allNews = getAllNews();
@@ -24,10 +24,7 @@ export default async function HomePage() {
             <div className="flex flex-col">
                 <div className="flex flex-col">
                     <h1 className="heading1">highlights</h1>
-                    <Link
-                        href="/home/news"
-                        className="hover:underline text-right"
-                    >
+                    <Link href="/news" className="hover:underline text-right">
                         view all →
                     </Link>
                 </div>

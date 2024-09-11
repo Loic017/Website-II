@@ -14,8 +14,7 @@ export default function NewsLoad({ news = [] }) {
                         {item.text}
                         <Link
                             className="ml-1 underline italic"
-                            href="/news/[id]"
-                            as={`/news/${item.id}`}
+                            href={`/news/${item.id}`}
                         >
                             Read More
                         </Link>

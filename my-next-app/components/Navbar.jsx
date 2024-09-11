@@ -13,6 +13,12 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
+    // const acpathname = "/" + pathname.split("/")[1];
+
+    // const a = "/news";
+    // console.log("/" + a.split("/")[1]);
+
+    // console.log(acpathname);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -59,7 +65,12 @@ export default function Navbar() {
                                                 key={index}
                                                 href={page.href}
                                                 className={`nav-link flex flex-row items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
-                                                    pathname === page.href
+                                                    "/" +
+                                                        pathname.split(
+                                                            "/"
+                                                        )[1] ===
+                                                    "/" +
+                                                        page.href.split("/")[1]
                                                         ? "active-link"
                                                         : ""
                                                 }`}
