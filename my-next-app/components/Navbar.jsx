@@ -74,15 +74,28 @@ export default function Navbar() {
                                                 key={index}
                                                 href={page.href}
                                                 className={`nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
+                                                    !page.external &&
                                                     "/" +
                                                         pathname.split(
                                                             "/"
                                                         )[1] ===
-                                                    "/" +
-                                                        page.href.split("/")[1]
+                                                        "/" +
+                                                            page.href.split(
+                                                                "/"
+                                                            )[1]
                                                         ? "active-link"
                                                         : ""
                                                 }`}
+                                                target={
+                                                    page.external
+                                                        ? "_blank"
+                                                        : "_self"
+                                                }
+                                                rel={
+                                                    page.external
+                                                        ? "noopener noreferrer"
+                                                        : ""
+                                                }
                                             >
                                                 <div className="text-base pl-2">
                                                     <page.icon />
@@ -181,14 +194,14 @@ const pages = [
     },
     {
         page_name: "GitHub",
-        href: "/a",
+        href: "https://www.github.com/Loic017",
         section: "Links",
         icon: FaGithub,
         external: true,
     },
     {
         page_name: "LinkedIn",
-        href: "/b",
+        href: "https://www.linkedin.com/in/lemoineloic/",
         section: "Links",
         icon: FaLinkedin,
         external: true,
