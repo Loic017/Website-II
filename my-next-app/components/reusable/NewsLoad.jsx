@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function NewsLoad({ news = [] }) {
     return (
-        <div className="flex flex-col gap-5 items-center my-5">
+        <div className="flex flex-col gap-5 items-center my-2">
             {news.map((item, index) => (
                 <div
                     key={index}
-                    className="flex flex-col text-justify nav-back p-5 rounded-md hover-scale"
+                    className="flex flex-col nav-back p-5 rounded-md hover-scale"
                 >
-                    <p className="news-paragraph small-caps pb-2">
+                    <p className="small-caps pb-2">
                         <span className="mr-2 italic border-r-2 border-white border-opacity-50 pr-2">
                             <b>{item.date}</b>
                         </span>

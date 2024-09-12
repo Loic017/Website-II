@@ -7,7 +7,7 @@ export default function Highlights() {
     const news = getAllNews();
 
     return (
-        <div className="my-5">
+        <div className="">
             <h1 className="heading1">highlights & news</h1>
             <p className="paragraph1">
                 A collection of accomplishments, milestones and other notable

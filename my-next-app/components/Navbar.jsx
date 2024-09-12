@@ -125,6 +125,7 @@ const sections = ["", "Me", "Work", "Links"];
 import { GoHomeFill as HomeLogo } from "react-icons/go";
 import { FaNewspaper as NewsLogo } from "react-icons/fa";
 import { FaArchive as ArchiveLogo } from "react-icons/fa";
+import { FaPenNib as WritingsLogo } from "react-icons/fa";
 import { GoPersonFill as InfoLogo } from "react-icons/go";
 import { BiSolidTimeFive as TimelineLogo } from "react-icons/bi";
 import { SiPublons as PublicationsLogo } from "react-icons/si";
@@ -169,6 +170,13 @@ const pages = [
         href: "/timeline",
         section: "Me",
         icon: TimelineLogo,
+        external: false,
+    },
+    {
+        page_name: "Writings",
+        href: "/writings",
+        section: "Me",
+        icon: WritingsLogo,
         external: false,
     },
     {

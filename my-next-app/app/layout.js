@@ -8,7 +8,7 @@ import {
 import "./globals.css";
 
 import Navbar from "../components/Navbar";
-import Filepath from "../components/Filepath";
+import Footer from "../components/Footer";
 
 const ibmPlexMono = IBM_Plex_Mono({
     subsets: ["latin"],
@@ -47,8 +47,8 @@ export default function RootLayout({ children }) {
                     {/* <Filepath /> */}
                     {children}
                 </main>
-                <footer className="flex justify-center py-4 text-gray-300 text-14px nav-back border-t border-gray-100 border-opacity-20">
-                    <p>Footer</p>
+                <footer className="">
+                    <Footer />
                 </footer>
             </body>
         </html>
