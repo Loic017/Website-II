@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "title": "Epileptic seizure detection with Tiny Machine Learning - a Preliminary Study",
+        "date": "2024",
+        "venue": {
+            "type": "symposium",
+            "name": "MobiUK 2024",
+            "full_name": "Sixth UK Mobile, Wearable and Ubiquitous Systems Research Symposium"
+        },
+        "authors": ["Loic Lemoine", "Nhat Pham"],
+        "link": "https://mobiuk.org/2024/abstract/S4_P2_Lemoine_Seizure.pdf"
+    }
+
+]

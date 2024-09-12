@@ -4,9 +4,9 @@
         "year_start": "2021",
         "year_end": "2024",
         "title": "Cardiff University",
-        "subtitle": "Undergraduate - BSc Computer Science",
-        "text": "Grade: First Class Honours", 
-        "image": "images/timeline/2021-2024.jpg"
+        "subtitle": "BSc Computer Science",
+        "text": "Grade: First Class Honours",
+        "image": "cu.png"
     },
     {
         "id": 2,
@@ -14,7 +14,7 @@
         "year_end": "2024",
         "title": "AgileCPS Lab",
         "subtitle": "Research Volunteer",
-        "text": "Workshop Paper", 
-        "image": "images/timeline/2021-2024.jpg"
+        "text": "Fine-tuned a GPT foundation model on stress EEG data, alongside other tasks, for a research paper on 'Stress quantification with an EEG-based foundation model.'", 
+        "image": "placeholder.jpg"
     }
 ]

@@ -3,7 +3,7 @@ import Image from "next/image";
 import banner from "../app/banner.png";
 
 import { getAllNews } from "../utility/load_news";
-import NewsLoad from "./resuable/NewsLoad";
+import NewsLoad from "./reusable/NewsLoad";
 
 export default async function HomePage() {
     const allNews = getAllNews();

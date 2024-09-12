@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import frontpage from "../frontpage.png";
+import Awards from "../../components/Awards";
 
 const Page = () => {
     return (
@@ -20,10 +21,9 @@ const Page = () => {
                 aim to make impactful contributions that benefit the world and
                 improve people&apos;s lives.
             </p>
-            <div className="border-l-2 pl-2 my-2 min-[700px]:w-[300px]">
+            <div className="border-l-2 pl-2 my-5 min-[700px]:w-[300px]">
                 <Image src={frontpage} alt="Banner" className="rounded-md" />
             </div>
-
             <p className="paragraph1">
                 Currently, I am self-studying maths and machine learning. I am
                 pursuing an MPhil and aim to start a PhD in the future.
@@ -33,45 +33,30 @@ const Page = () => {
                 While I am continuously learning new technologies, the following
                 list includes some of the <i>key</i> technologies I have worked
                 with.
-                <ul className="flex flex-col min-[700px]:flex-row min-[700px]:gap-5 my-2">
-                    <li>
-                        <b>Languages:</b>
-                    </li>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-                <ul className="flex flex-col min-[700px]:flex-row min-[700px]:gap-5 my-2">
-                    <li>
-                        <b>Frameworks and Libararies:</b>
-                    </li>
-                    <li>PyTorch</li>
-                    <li>Django</li>
-                    <li>React</li>
-                    <li>Next.js</li>
-                    <li>Tailwind</li>
-                </ul>
             </p>
-            <h1 className="heading1">links</h1>
-            <p className="paragraph1">
-                • Contact me via email at &quot;reachloic@gmail.com&quot; or
-                messaged on LinkedIn.
-            </p>
-            <p className="paragraph1">
-                • Check out some of my work and projects on my GitHub.
-            </p>
-            <ul className="flex gap-5 justify-around mb-3">
+            <ul className="flex flex-col min-[700px]:flex-row min-[700px]:gap-5 my-2">
                 <li>
-                    <Link href="/info">GitHub →</Link>
+                    <b>Languages:</b>
                 </li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <ul className="flex flex-col min-[700px]:flex-row min-[700px]:gap-5 my-2">
                 <li>
-                    <Link href="/info">LinkedIn →</Link>
+                    <b>Frameworks and Libraries:</b>
                 </li>
-                <li>
-                    <Link href="/info">Email →</Link>
-                </li>
+                <li>PyTorch</li>
+                <li>Django</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Tailwind</li>
+            </ul>
+            <h1 className="heading1">awards</h1>
+            <ul className="flex flex-col min-[700px]:flex-row min-[700px]:gap-5 my-2">
+                <Awards />
             </ul>
         </div>
     );
