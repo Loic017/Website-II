@@ -41,18 +41,15 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="#" href="#" />
             </head>
-            <body className="font-carme">
-                <div className="h-full">
-                    <div className="">
-                        <Navbar />
-                        <div className="">
-                            <div className="w-[380px] min-[700px]:w-[600px] my-16 mx-auto max-[600px]:mb-24">
-                                {/* <Filepath /> */}
-                                {children}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <body className="font-carme min-h-screen flex flex-col">
+                <Navbar />
+                <main className="flex-grow w-[380px] min-[700px]:w-[600px] my-16 mx-auto max-[600px]:mb-24">
+                    {/* <Filepath /> */}
+                    {children}
+                </main>
+                <footer className="flex justify-center py-4 text-gray-300 text-14px nav-back border-t border-gray-100 border-opacity-20">
+                    <p>Footer</p>
+                </footer>
             </body>
         </html>
     );

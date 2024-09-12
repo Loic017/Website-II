@@ -2,24 +2,28 @@
     {
         "id": 1,
         "date": "July 2024",
+        "title": "Best Final Year Project Award",
         "text": "I have been awarded the \"Best Final Year Project, BSc Computer Science and Variants\" prize from the School of Computer Science and Informatics at Cardiff University for my study on TinyML for Epileptic Seizures.", 
         "content": ""
     },
     {
         "id": 2,
         "date": "July 2024",
+        "title": "BSc Computer Science with First Class Honours",
         "text": "I have graduated from Cardiff University with First Class Honours in BSc Computer Science.",
         "content": ""
     },
     {
         "id": 3,
         "date": "June 2024",
+        "title": "First Prize in Global Wales' Cardiff-VNU Student Poster Competition",
         "text": "I have won first prize in the Global Wales' Cardiff-VNU student poster competition on \"AI, Smart Healthcare, and IoT\" in 2024.",
         "content": ""
     },
     {
         "id": 4,
         "date": "May 2024",
+        "title": "Accepted to MobiUK 2024 Symposium",
         "text": "My extended abstract on 'Epileptic seizure detection with Tiny Machine Learning' has been accepted to the MobiUK 2024 Symposium.",
         "content": ""
     }

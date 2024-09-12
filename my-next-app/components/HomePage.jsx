@@ -23,7 +23,7 @@ export default async function HomePage() {
             </div>
             <div className="flex flex-col">
                 <div className="flex flex-col">
-                    <h1 className="heading1">highlights</h1>
+                    <h1 className="heading1">recent highlights</h1>
                     <Link href="/news" className="hover:underline text-right">
                         view all →
                     </Link>

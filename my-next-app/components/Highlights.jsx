@@ -8,7 +8,7 @@ export default function Highlights() {
 
     return (
         <div className="my-5">
-            <h1 className="heading1"># highlights & news</h1>
+            <h1 className="heading1">highlights & news</h1>
             <p className="paragraph1">
                 A collection of accomplishments, milestones and other notable
                 moments.

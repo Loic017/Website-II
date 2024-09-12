@@ -42,6 +42,10 @@ body {
     @apply text-justify my-2;
 }
 
+.news-paragraph {
+    @apply text-justify;
+}
+
 .link {
     @apply hover:underline;
 }
@@ -59,7 +63,7 @@ body {
 }
 
 .menu-transition {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease;
     transform: translateX(-100%);
 }
 
@@ -123,4 +127,17 @@ body {
 .custom-select:focus {
     outline: none; /* Remove default outline */
     border-color: #555555; /* Border color on focus */
+}
+
+.hover-scale {
+    transition: transform 0.2s ease; /* Add transition for smooth effect */
+}
+
+.hover-scale:hover {
+    --tw-scale-x: 1.01;
+    --tw-scale-y: 1.01;
+    transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0))
+        rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0))
+        skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
 }

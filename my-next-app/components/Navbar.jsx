@@ -7,6 +7,7 @@ import Filepath from "../components/Filepath";
 
 import { CgCloseR } from "react-icons/cg";
 import { FaHamburger } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 import { usePathname } from "next/navigation";
 
@@ -26,13 +27,21 @@ export default function Navbar() {
 
     return (
         <div className="mb-5 transition-all text-gray-200 text-14px">
-            <div className="min-[1300px]:bg-black flex w-full fixed top-0 z-20 nav-back py-[0.7rem] px-6 border-b border-gray-100 border-opacity-20 text-left justify-between">
+            <div className="min-[1300px]:bg-black flex w-full fixed top-0 z-30 nav-back py-[0.7rem] px-6 border-b border-gray-100 border-opacity-20 text-left justify-between">
                 <button className="min-[1300px]:hidden" onClick={toggleMenu}>
                     <FaHamburger />
                 </button>
                 <h1 className="text-14px font-bold">Loic Lorente Lemoine</h1>
             </div>
-
+            {menuOpen && (
+                <div
+                    className={`z-0 fixed left-0 top-0 w-screen h-screen bg-black opacity-60 menu-transition ${
+                        menuOpen ? "menu-open" : ""
+                    }`}
+                >
+                    <h1>asdasd</h1>
+                </div>
+            )}
             <div
                 className={`nav-back h-screen fixed top-0 left-0 border-r border-gray-100 border-opacity-20 min-[600px]:w-[290px] w-[310px] text-left px-3 py-2 menu-transition ${
                     menuOpen ? "menu-open" : ""
@@ -50,7 +59,7 @@ export default function Navbar() {
                     </span>
                 </div>
 
-                <div className="text-left h-full space-y-1 nav-back flex flex-col z-10">
+                <div className="text-left h-full space-y-1 nav-back flex flex-col z-20">
                     <div className="flex flex-col gap-7 flex-grow">
                         {sections.map((section, index) => (
                             <div key={index}>
@@ -64,7 +73,7 @@ export default function Navbar() {
                                             <Link
                                                 key={index}
                                                 href={page.href}
-                                                className={`nav-link flex flex-row items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
+                                                className={`nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
                                                     "/" +
                                                         pathname.split(
                                                             "/"
@@ -78,7 +87,14 @@ export default function Navbar() {
                                                 <div className="text-base pl-2">
                                                     <page.icon />
                                                 </div>
-                                                {page.page_name}
+                                                <div className="flex-grow">
+                                                    {page.page_name}
+                                                </div>
+                                                {page.external === true && (
+                                                    <div className="text-md flex-shrink-0 pr-2">
+                                                        <FiArrowUpRight />
+                                                    </div>
+                                                )}
                                             </Link>
                                         ))}
                                 </div>

@@ -11,12 +11,6 @@ const Archive = () => {
     };
     return (
         <div className="">
-            <h1 className="heading1">archive</h1>
-            <p className="paragraph1">
-                I am always looking for resources or anything that is useful.
-                Here is a collection of things I have found, categorised into
-                tags.
-            </p>
             <div className="flex flex-col gap-2 border-y-[1.5px] border-y-gray-600 py-4 mt-5">
                 <div className="flex gap-5 justify-end">
                     <label htmlFor="filter">Filter by:</label>

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "year_start": "2021",
+        "year_end": "2024",
+        "title": "Cardiff University",
+        "subtitle": "Undergraduate - BSc Computer Science",
+        "text": "Grade: First Class Honours", 
+        "image": "images/timeline/2021-2024.jpg"
+    },
+    {
+        "id": 2,
+        "year_start": "2024",
+        "year_end": "2024",
+        "title": "AgileCPS Lab",
+        "subtitle": "Research Volunteer",
+        "text": "Workshop Paper", 
+        "image": "images/timeline/2021-2024.jpg"
+    }
+]
