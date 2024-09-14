@@ -25,8 +25,17 @@ body {
     @apply bg-[#404040] rounded-md;
 }
 
+.category-box {
+    @apply nav-back p-5 w-full rounded-md;
+}
+
 .heading1 {
     @apply text-[2rem] w-full mt-1 mb-2 pb-2 font-semibold border-b border-white border-opacity-20;
+    font-variant: small-caps;
+}
+
+.heading2 {
+    @apply text-[1.5rem] w-full mt-1 mb-2 pb-2 font-semibold;
     font-variant: small-caps;
 }
 
@@ -40,6 +49,10 @@ body {
 
 .paragraph1 {
     @apply text-justify my-2;
+}
+
+.paragraph1-nomy {
+    @apply text-justify;
 }
 
 .news-paragraph {
@@ -90,7 +103,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --foreground-rgb: 200, 200, 200;
+        --foreground-rgb: 230, 230, 230;
         --background-start-rgb: 5, 5, 5;
         --background-end-rgb: 5, 5, 5;
     }

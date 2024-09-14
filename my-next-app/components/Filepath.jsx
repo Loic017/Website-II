@@ -14,9 +14,6 @@ export default function Filepath() {
         printpath = pathname;
     }
 
-    // print the path variable
-    console.log(printpath);
-
     return (
         <div className="">
             <p className="opacity-60">{printpath}</p>

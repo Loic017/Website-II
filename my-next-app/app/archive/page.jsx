@@ -1,16 +1,17 @@
 import React from "react";
-import Archive from "../../components/Archive";
+import ArchiveFilter from "../../components/ArchiveFilter";
 
 const Page = () => {
     return (
         <div>
             <h1 className="heading1">archive</h1>
             <p className="paragraph1">
-                I am always looking for resources or anything that is useful.
-                Here is a collection of things I have found, categorised into
-                tags.
+                I am always looking for different resources or anything that is
+                useful for topics I am interested in. Here is a collection of
+                things I have found, categorised into tags and featuring some
+                comments.
             </p>
-            <Archive />
+            <ArchiveFilter />
         </div>
     );
 };

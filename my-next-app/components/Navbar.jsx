@@ -2,10 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import banner from "../app/banner.png";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Filepath from "../components/Filepath";
 
-import { CgCloseR } from "react-icons/cg";
+import { FaArrowLeft } from "react-icons/fa";
 import { FaHamburger } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -28,8 +28,11 @@ export default function Navbar() {
     return (
         <div className="mb-5 transition-all text-gray-200 text-14px">
             <div className="min-[1300px]:bg-black flex w-full fixed top-0 z-30 nav-back py-[0.7rem] px-6 border-b border-gray-100 border-opacity-20 text-left justify-between">
-                <button className="min-[1300px]:hidden" onClick={toggleMenu}>
-                    <FaHamburger />
+                <button
+                    className={`min-[1300px]:hidden ${menuOpen ? "" : ""}`}
+                    onClick={toggleMenu}
+                >
+                    {menuOpen ? <FaArrowLeft /> : <FaHamburger />}
                 </button>
                 <h1 className="text-14px font-bold">Loic Lorente Lemoine</h1>
             </div>
@@ -38,16 +41,15 @@ export default function Navbar() {
                     className={`z-0 fixed left-0 top-0 w-screen h-screen bg-black opacity-60 menu-transition ${
                         menuOpen ? "menu-open" : ""
                     }`}
-                >
-                    <h1>asdasd</h1>
-                </div>
+                    onClick={toggleMenu}
+                ></div>
             )}
             <div
                 className={`nav-back h-screen fixed top-0 left-0 border-r border-gray-100 border-opacity-20 min-[600px]:w-[290px] w-[310px] text-left px-3 py-2 menu-transition ${
                     menuOpen ? "menu-open" : ""
                 }`}
             >
-                <div className="text-left nav-back min-h-[37px] flex flex-col justify-center font-bold">
+                {/* <div className="text-left nav-back min-h-[37px] flex flex-col justify-center font-bold">
                     <span className="flex items-center gap-4">
                         <button
                             className="cursor-move min-[1300px]:hidden"
@@ -57,7 +59,8 @@ export default function Navbar() {
                         </button>
                         <h1 className="text-14px pl-3">Loic Lorente Lemoine</h1>
                     </span>
-                </div>
+                </div> */}
+                <div className="text-left nav-back min-h-[37px] flex flex-col justify-center font-bold"></div>
 
                 <div className="text-left h-full space-y-1 nav-back flex flex-col z-20">
                     <div className="flex flex-col gap-7 flex-grow">
@@ -70,45 +73,87 @@ export default function Navbar() {
                                             (page) => page.section === section
                                         )
                                         .map((page, index) => (
-                                            <Link
-                                                key={index}
-                                                href={page.href}
-                                                className={`nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
-                                                    !page.external &&
-                                                    "/" +
-                                                        pathname.split(
-                                                            "/"
-                                                        )[1] ===
+                                            <div key={index}>
+                                                <Link
+                                                    key={index}
+                                                    href={page.href}
+                                                    onClick={toggleMenu}
+                                                    className={`min-[1300px]:hidden nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
+                                                        !page.external &&
                                                         "/" +
-                                                            page.href.split(
+                                                            pathname.split(
                                                                 "/"
-                                                            )[1]
-                                                        ? "active-link"
-                                                        : ""
-                                                }`}
-                                                target={
-                                                    page.external
-                                                        ? "_blank"
-                                                        : "_self"
-                                                }
-                                                rel={
-                                                    page.external
-                                                        ? "noopener noreferrer"
-                                                        : ""
-                                                }
-                                            >
-                                                <div className="text-base pl-2">
-                                                    <page.icon />
-                                                </div>
-                                                <div className="flex-grow">
-                                                    {page.page_name}
-                                                </div>
-                                                {page.external === true && (
-                                                    <div className="text-md flex-shrink-0 pr-2">
-                                                        <FiArrowUpRight />
+                                                            )[1] ===
+                                                            "/" +
+                                                                page.href.split(
+                                                                    "/"
+                                                                )[1]
+                                                            ? "active-link"
+                                                            : ""
+                                                    }`}
+                                                    target={
+                                                        page.external
+                                                            ? "_blank"
+                                                            : "_self"
+                                                    }
+                                                    rel={
+                                                        page.external
+                                                            ? "noopener noreferrer"
+                                                            : ""
+                                                    }
+                                                >
+                                                    <div className="text-base pl-2">
+                                                        <page.icon />
                                                     </div>
-                                                )}
-                                            </Link>
+                                                    <div className="flex-grow">
+                                                        {page.page_name}
+                                                    </div>
+                                                    {page.external === true && (
+                                                        <div className="text-md flex-shrink-0 pr-2">
+                                                            <FiArrowUpRight />
+                                                        </div>
+                                                    )}
+                                                </Link>
+                                                <Link
+                                                    key={index}
+                                                    href={page.href}
+                                                    className={`max-[1300px]:hidden nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
+                                                        !page.external &&
+                                                        "/" +
+                                                            pathname.split(
+                                                                "/"
+                                                            )[1] ===
+                                                            "/" +
+                                                                page.href.split(
+                                                                    "/"
+                                                                )[1]
+                                                            ? "active-link"
+                                                            : ""
+                                                    }`}
+                                                    target={
+                                                        page.external
+                                                            ? "_blank"
+                                                            : "_self"
+                                                    }
+                                                    rel={
+                                                        page.external
+                                                            ? "noopener noreferrer"
+                                                            : ""
+                                                    }
+                                                >
+                                                    <div className="text-base pl-2">
+                                                        <page.icon />
+                                                    </div>
+                                                    <div className="flex-grow">
+                                                        {page.page_name}
+                                                    </div>
+                                                    {page.external === true && (
+                                                        <div className="text-md flex-shrink-0 pr-2">
+                                                            <FiArrowUpRight />
+                                                        </div>
+                                                    )}
+                                                </Link>
+                                            </div>
                                         ))}
                                 </div>
                             </div>

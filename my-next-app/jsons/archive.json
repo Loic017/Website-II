@@ -1,0 +1,19 @@
+[
+{
+    "id": 1,
+    "category": "machine-learning",
+    "title": "100 Page ML Book",
+    "brief": "Good ML book",
+    "link": "www.google.com",
+    "image": "placeholder.jpg"
+    
+},
+{
+    "id": 2,
+    "category": "math",
+    "title": "Professor Leonard",
+    "brief": "The GOAT for all things precalc and calc",
+    "link": "www.google.com",
+    "image": "placeholder.jpg"
+}
+]
