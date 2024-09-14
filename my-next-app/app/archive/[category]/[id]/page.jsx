@@ -1,18 +1,18 @@
 import {
     getArticleData,
     getAllArticleIds,
-} from "../../../utility/load_articles";
+} from "../../../../utility/load_archive";
 import ReactMarkdown from "react-markdown";
-import { h1_style, h2_style, p_style } from "../../../components/CustomMd";
+import { h1_style, h2_style, p_style } from "../../../../components/CustomMd";
 
-import { getAllNews } from "../../../utility/load_news";
-import NewsLoad from "../../../components/reusable/NewsLoad";
+import { getAllArchive } from "../../../../utility/load_archives";
+import ArchiveLoad from "../../../../components/reusable/ArchiveLoad";
 
 import Link from "next/link";
 
 export default async function Page({ params }) {
     const articleData = await getArticleData(params.id);
-    const news = getAllNews();
+    const news = getAllArchive();
     var matchNews;
 
     const articleId = parseInt(params.id, 10);
@@ -30,12 +30,10 @@ export default async function Page({ params }) {
     return (
         <div className="">
             <div className="flex flex-row items-center justify-between">
-                <Link
-                    href={`/archive/${matchNews.category}`}
-                    className="text-lg hover:underline"
-                >
+                <Link href="/news" className="text-lg hover:underline">
                     ← Back
                 </Link>
+                <p className=".paragraph1-nomy">{matchNews.date}</p>
             </div>
             <div className="flex flex-col items-center justify-between my-2 py-2 border-y-2 border-white border-opacity-10">
                 <p className=".paragraph1-nomy">{matchNews.title}</p>

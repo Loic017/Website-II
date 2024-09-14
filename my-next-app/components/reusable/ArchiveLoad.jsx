@@ -7,7 +7,7 @@ export default function ArchiveLoad({ archive = [] }) {
         <div className="flex flex-col gap-5">
             {archive.map((item, index) => (
                 <Link
-                    href="/"
+                    href={`/archive/${item.category}/${item.id}`}
                     key={index}
                     className="category-box hover-scale flex justify-between items-center"
                 >
