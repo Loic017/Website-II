@@ -25,6 +25,12 @@ export default function Navbar() {
         setMenuOpen(!menuOpen);
     };
 
+    const handleLinkClick = () => {
+        if (menuOpen) {
+            toggleMenu();
+        }
+    };
+
     return (
         <div className="mb-5 transition-all text-gray-200 text-14px">
             <div className="min-[1300px]:bg-black flex w-full fixed top-0 z-30 nav-back py-[0.7rem] px-6 border-b border-gray-100 border-opacity-20 text-left justify-between">
@@ -73,12 +79,11 @@ export default function Navbar() {
                                             (page) => page.section === section
                                         )
                                         .map((page, index) => (
-                                            <div key={index}>
+                                            <div key={page.href}>
                                                 <Link
-                                                    key={index}
                                                     href={page.href}
-                                                    onClick={toggleMenu}
-                                                    className={`min-[1300px]:hidden nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
+                                                    onClick={handleLinkClick}
+                                                    className={`nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
                                                         !page.external &&
                                                         "/" +
                                                             pathname.split(
@@ -103,46 +108,9 @@ export default function Navbar() {
                                                     }
                                                 >
                                                     <div className="text-base pl-2">
-                                                        <page.icon />
-                                                    </div>
-                                                    <div className="flex-grow">
-                                                        {page.page_name}
-                                                    </div>
-                                                    {page.external === true && (
-                                                        <div className="text-md flex-shrink-0 pr-2">
-                                                            <FiArrowUpRight />
-                                                        </div>
-                                                    )}
-                                                </Link>
-                                                <Link
-                                                    key={index}
-                                                    href={page.href}
-                                                    className={`max-[1300px]:hidden nav-link flex items-center gap-3 hover:bg-[#404040] hover:rounded-md py-[0.35rem] ${
-                                                        !page.external &&
-                                                        "/" +
-                                                            pathname.split(
-                                                                "/"
-                                                            )[1] ===
-                                                            "/" +
-                                                                page.href.split(
-                                                                    "/"
-                                                                )[1]
-                                                            ? "active-link"
-                                                            : ""
-                                                    }`}
-                                                    target={
-                                                        page.external
-                                                            ? "_blank"
-                                                            : "_self"
-                                                    }
-                                                    rel={
-                                                        page.external
-                                                            ? "noopener noreferrer"
-                                                            : ""
-                                                    }
-                                                >
-                                                    <div className="text-base pl-2">
-                                                        <page.icon />
+                                                        {page.icon && (
+                                                            <page.icon />
+                                                        )}
                                                     </div>
                                                     <div className="flex-grow">
                                                         {page.page_name}
