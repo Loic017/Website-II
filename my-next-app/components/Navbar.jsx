@@ -207,8 +207,8 @@ const pages = [
         external: false,
     },
     {
-        page_name: "Other Work",
-        href: "/other-Work",
+        page_name: "Projects",
+        href: "/projects",
         section: "Work",
         icon: WorkLogo,
         external: false,

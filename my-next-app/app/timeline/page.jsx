@@ -4,7 +4,7 @@ import Timeline from "../../components/Timeline";
 const Page = () => {
     return (
         <div>
-            <h1 className="heading1">Timeline</h1>
+            <h1 className="heading1">timeline</h1>
             <p className="paragraph1">Education and experience history.</p>
             <Timeline />
         </div>

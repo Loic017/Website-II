@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "Placeholder",
+        "type": "research",
+        "stack": ["Python", "PyTorch"],
+        "brief": "Placeholder",
+        "image": "placeholder.jpg",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": ""}
+        ]
+    },
+    {
+        "id": 2,
+        "name": "My Website",
+        "type": "personal",
+        "stack": ["Next.js", "Tailwind"],
+        "brief": "This website.",
+        "image": "placeholder.jpg",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": ""},
+            {
+                "name": "Link",
+                "url": ""}
+        ]
+    }
+]

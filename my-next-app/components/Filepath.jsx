@@ -16,7 +16,7 @@ export default function Filepath() {
 
     return (
         <div className="">
-            <p className="opacity-60">{printpath}</p>
+            <p className="">{printpath}</p>
         </div>
     );
 }
