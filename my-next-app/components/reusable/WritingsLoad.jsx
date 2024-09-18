@@ -2,9 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import NoneFound from "../NoneFound";
+
 export default function WritingsLoad({ writings = [] }) {
     return (
         <div className="flex flex-col gap-5">
+            {writings.length === 0 && <NoneFound />}
             {writings.map((item, index) => (
                 <Link
                     href={`/writings/${item.id}`}

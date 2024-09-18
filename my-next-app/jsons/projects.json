@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "name": "Placeholder",
+        "name": "Epileptic seizure detection with Tiny Machine Learning",
         "type": "research",
         "stack": ["Python", "PyTorch"],
-        "brief": "Placeholder",
+        "brief": "A study exploring the development and implementation of efficient Tiny Machine Learning models for the detection of epileptic seizures on an Arduino Platform.",
         "image": "placeholder.jpg",
         "links": [
             {
