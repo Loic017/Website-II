@@ -1,10 +1,13 @@
 import React from "react";
-import Highlights from "../../components/Highlights";
+import Link from "next/link";
+import WritingsList from "../../components/WritingsList";
 
-const Page = () => {
+const Page = ({ params }) => {
     return (
         <div>
-            <h1 className="heading1">hello</h1>
+            <h1 className="heading1">writings</h1>
+            <p className="paragraph1">Notes or anything.</p>
+            <WritingsList />
         </div>
     );
 };

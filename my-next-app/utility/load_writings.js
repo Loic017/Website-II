@@ -1,29 +1,18 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 
-const articlesDirectory = path.join(process.cwd(), "markdown/writings");
+const writingFilePath = path.join(process.cwd(), "./jsons/writings.json");
+// console.log("writing file path:", writingFilePath);
 
-export function getAllArticleIds() {
-    const fileNames = fs.readdirSync(articlesDirectory);
-    return fileNames.map((fileName) => {
-        return {
-            params: {
-                id: fileName.replace(/\.md$/, ""),
-            },
-        };
-    });
-}
-
-export async function getArticleData(id) {
-    const fullPath = path.join(articlesDirectory, `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    const matterResult = matter(fileContents);
-
-    return {
-        id,
-        contentMarkdown: matterResult.content,
-        ...matterResult.data,
-    };
+export function getAllWritings() {
+    // console.log("getAllWritings function called");
+    try {
+        const fileContents = fs.readFileSync(writingFilePath, "utf8");
+        // console.log("File contents:", fileContents);
+        const writing = JSON.parse(fileContents);
+        return writing;
+    } catch (error) {
+        // console.error("Error reading writing.json:", error);
+        return [];
+    }
 }
