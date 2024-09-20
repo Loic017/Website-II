@@ -37,20 +37,41 @@ export default async function HomePage() {
     return (
         <div className="">
             <div className="flex flex-col">
-                <h1 className="heading1">welcome</h1>
+                <h1 className="heading1">good evening</h1>
                 <p className="paragraph1">
-                    This website is still being setup and will constantly be
-                    updated with new information. View my old website{" "}
+                    Hi, I am Loic - a recent computer science graduate from
+                    Cardiff University. To find out more about me, go to the{" "}
                     <Link href="" className="underline hover:italic">
-                        here
+                        info page
                     </Link>
                     .
+                </p>
+                <p className="paragraph1">
+                    This website contains various details about me and my work.
+                    While it may be overengineered and contain unnecessary
+                    features, I aim to use this for some writing alongside its
+                    main purpose of showcasing my work. I hope you enjoy your
+                    stay.
                 </p>
                 <Image
                     src={banner}
                     alt="Banner"
                     className="rounded-sm border-l-2 pl-2 my-5"
                 />
+                <p className="paragraph1">
+                    <b>Notice:</b> This website is still being setup and will
+                    continuously be updated with new information. For any
+                    missing pages, alternatives may be found on my old website{" "}
+                    <Link
+                        href="lorentel.vercel.app"
+                        className="underline hover:italic"
+                    >
+                        here
+                    </Link>
+                    . Some pages may not load or may return a 404 error, so
+                    please bear with me as I move over and setup the
+                    information.
+                </p>
             </div>
             <div>
                 <div className="flex flex-col">

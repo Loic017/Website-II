@@ -15,14 +15,17 @@ export default function ArchiveLoad({ archive = [] }) {
                         <h2 className="heading2">{item.title}</h2>
                         <p className="paragraph1">{item.brief}</p>
                     </div>
-                    <div>
+                    <div className="flex flex-row items-center gap-5">
                         <Image
                             src={`/images/${item.image}`}
                             alt={item.title}
                             className="rounded-sm"
-                            width={75}
-                            height={75}
+                            width={100}
+                            height={100}
                         />
+                        <span ClassName="">
+                            <b>&rarr;</b>
+                        </span>
                     </div>
                 </Link>
             ))}

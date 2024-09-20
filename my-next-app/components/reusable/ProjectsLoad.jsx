@@ -54,7 +54,7 @@ export default function ProjectsLoad({ projects = [] }) {
                                             {item.stack.map((tech, index) => (
                                                 <span
                                                     key={index}
-                                                    className="px-3 py-[0.05rem] rounded-lg bg-blue-700 bg-opacity-80"
+                                                    className="px-3 py-[0.05rem] rounded-lg bg-gray-700 bg-opacity-80"
                                                 >
                                                     {tech}
                                                 </span>
@@ -71,7 +71,7 @@ export default function ProjectsLoad({ projects = [] }) {
                                         {item.stack.map((tech, index) => (
                                             <span
                                                 key={index}
-                                                className="px-3 py-[0.05rem] rounded-lg bg-blue-700 bg-opacity-80"
+                                                className="px-3 py-[0.05rem] rounded-lg bg-gray-700 bg-opacity-80"
                                             >
                                                 {tech}
                                             </span>

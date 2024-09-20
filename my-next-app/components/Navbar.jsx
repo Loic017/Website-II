@@ -97,6 +97,11 @@ export default function Navbar() {
                                                                 )[1]
                                                             ? "active-link"
                                                             : ""
+                                                    }
+                                                    ${
+                                                        !page.enabled
+                                                            ? "opacity-50 cursor-not-allowed"
+                                                            : ""
                                                     }`}
                                                     target={
                                                         page.external
@@ -158,6 +163,7 @@ const pages = [
         section: "",
         icon: HomeLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "News",
@@ -165,6 +171,7 @@ const pages = [
         section: "",
         icon: NewsLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Archive",
@@ -172,6 +179,7 @@ const pages = [
         section: "",
         icon: ArchiveLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Info",
@@ -179,6 +187,7 @@ const pages = [
         section: "Me",
         icon: InfoLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Timeline",
@@ -186,6 +195,7 @@ const pages = [
         section: "Me",
         icon: TimelineLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Writings",
@@ -193,6 +203,7 @@ const pages = [
         section: "Me",
         icon: WritingsLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Publications",
@@ -200,6 +211,7 @@ const pages = [
         section: "Work",
         icon: PublicationsLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Research Work",
@@ -207,6 +219,7 @@ const pages = [
         section: "Work",
         icon: ResearchLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "Projects",
@@ -214,6 +227,7 @@ const pages = [
         section: "Work",
         icon: WorkLogo,
         external: false,
+        enabled: true,
     },
     {
         page_name: "GitHub",
@@ -221,6 +235,7 @@ const pages = [
         section: "Links",
         icon: FaGithub,
         external: true,
+        enabled: true,
     },
     {
         page_name: "LinkedIn",
@@ -228,6 +243,7 @@ const pages = [
         section: "Links",
         icon: FaLinkedin,
         external: true,
+        enabled: true,
     },
     {
         page_name: "Email",
@@ -235,6 +251,7 @@ const pages = [
         section: "Links",
         icon: MdEmail,
         external: true,
+        enabled: false,
     },
     {
         page_name: "Resumse / CV",
@@ -242,5 +259,6 @@ const pages = [
         section: "Links",
         icon: FaPen,
         external: true,
+        enabled: false,
     },
 ];
