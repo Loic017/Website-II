@@ -33,9 +33,11 @@ export default function Navbar() {
 
     return (
         <div className="mb-5 transition-all text-gray-200 text-14px">
-            <div className="min-[1300px]:bg-black flex w-full fixed top-0 z-30 nav-back py-[0.7rem] px-6 border-b border-gray-100 border-opacity-20 text-left justify-between">
+            <div className="mobile_burger_break:bg-black flex w-full fixed top-0 z-30 nav-back py-[0.7rem] px-6 border-b border-gray-100 border-opacity-20 text-left justify-between">
                 <button
-                    className={`min-[1300px]:hidden ${menuOpen ? "" : ""}`}
+                    className={`mobile_burger_break:hidden ${
+                        menuOpen ? "" : ""
+                    }`}
                     onClick={toggleMenu}
                 >
                     {menuOpen ? <FaArrowLeft /> : <FaHamburger />}
@@ -51,14 +53,14 @@ export default function Navbar() {
                 ></div>
             )}
             <div
-                className={`nav-back h-screen fixed top-0 left-0 border-r border-gray-100 border-opacity-20 min-[600px]:w-[290px] w-[310px] text-left px-3 py-2 menu-transition ${
+                className={`nav-back h-screen fixed top-0 left-0 border-r border-gray-100 border-opacity-20 nav_break_1:w-[290px] nav_break_2:w-[200px] mobile_burger_break:w-[150px] text-left px-3 py-2 menu-transition ${
                     menuOpen ? "menu-open" : ""
                 }`}
             >
                 {/* <div className="text-left nav-back min-h-[37px] flex flex-col justify-center font-bold">
                     <span className="flex items-center gap-4">
                         <button
-                            className="cursor-move min-[1300px]:hidden"
+                            className="cursor-move min-[900px]:hidden"
                             onClick={toggleMenu}
                         >
                             <CgCloseR />

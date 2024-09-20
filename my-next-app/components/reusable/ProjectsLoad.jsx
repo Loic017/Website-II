@@ -1,59 +1,118 @@
-import React from "react";
-import Link from "next/link";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-
 import ViewMoreBtn from "../ViewMoreBtn";
 
 export default function ProjectsLoad({ projects = [] }) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+    };
+
     return (
         <div className="flex flex-col gap-5">
-            {projects.map((item, index) => (
-                <div
-                    // href={`/research/${item.id}`}
-                    key={index}
-                    className="category-box hover-scale gap-4 items-start"
-                >
-                    <div className="w-full h-full flex flex-col gap-1 items-center">
-                        <Image
-                            src={`/images/${item.image}`}
-                            alt={item.name}
-                            className="rounded-md object-cover w-full h-40"
-                            width={50}
-                            height={50}
-                        />
-                        <p className="">
-                            <span className="text-red-200 small-caps">
-                                {item.stack.map((tech, index) => (
-                                    <span key={index} className="text-sm">
-                                        {tech}
-                                        {index < item.stack.length - 1
-                                            ? ", "
-                                            : " "}{" "}
+            {projects.map((item, index) => {
+                const isHighlighted = item.highlighted;
+                const brief = isHighlighted
+                    ? item.brief
+                    : item.brief.split(" ").slice(0, 10).join(" ") + "...";
+                const imageHeight = isHighlighted ? "h-40" : "h-full";
+                const imageWidth = isHighlighted ? "w-full" : "w-20";
+                const containerClass = isHighlighted
+                    ? "flex-col items-center gap-2"
+                    : "flex-row items-start gap-3";
+
+                return (
+                    <div
+                        key={index}
+                        className="category-box gap-1 items-start flex flex-col"
+                    >
+                        <div
+                            className={`w-full h-full flex ${containerClass} items-center`}
+                        >
+                            <div
+                                className={`${imageWidth} ${imageHeight} flex-shrink-0`}
+                            >
+                                <Image
+                                    src={`/images/${item.image}`}
+                                    alt={item.name}
+                                    className="rounded-md object-cover w-full h-full"
+                                    width={50}
+                                    height={50}
+                                />
+                            </div>
+                            <div className="flex flex-col gap-3 w-full">
+                                <div className="flex flex-col gap-1">
+                                    <h2 className="heading2-nomy text-md">
+                                        <b>{item.name}</b>
+                                    </h2>
+                                </div>
+                                {isHighlighted && (
+                                    <p className="flex items-center text-center rounded-md overflow-scroll">
+                                        <span className="flex gap-2 text-sm">
+                                            {item.stack.map((tech, index) => (
+                                                <span
+                                                    key={index}
+                                                    className="px-3 py-[0.05rem] rounded-lg bg-blue-700 bg-opacity-80"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </span>
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                        <div className="flex flex-col w-full">
+                            {!isHighlighted && (
+                                <p className="flex items-center text-center rounded-md overflow-scroll pt-2">
+                                    <span className="flex gap-2 text-sm">
+                                        {item.stack.map((tech, index) => (
+                                            <span
+                                                key={index}
+                                                className="px-3 py-[0.05rem] rounded-lg bg-blue-700 bg-opacity-80"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
                                     </span>
-                                ))}
-                            </span>
-                        </p>
-                    </div>
-                    <div className="flex flex-col gap-3">
-                        <h2 className="heading2-nomy text-md">
-                            <b>{item.name}</b>
-                        </h2>
-                        <div>
-                            <p className="">{item.brief}</p>
+                                </p>
+                            )}
+                            <p className="py-3">{brief}</p>
+                            <div className="self-center flex flex-col gap-2 w-full border-t-2 border-white border-opacity-20 pt-3">
+                                {item.links.map((link, index) =>
+                                    link.name === "Read More" ? (
+                                        <ViewMoreBtn
+                                            key={index}
+                                            to={`/research/${item.id}`}
+                                            text={link.name}
+                                            className="w-full"
+                                        />
+                                    ) : null
+                                )}
+                                {isHighlighted && (
+                                    <div className="flex flex-wrap gap-2 w-full">
+                                        {item.links
+                                            .filter(
+                                                (link) =>
+                                                    link.name !== "Read More"
+                                            )
+                                            .map((link, index) => (
+                                                <ViewMoreBtn
+                                                    key={index}
+                                                    to={link.url}
+                                                    text={link.name}
+                                                    className=""
+                                                />
+                                            ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                        <div className="self-center mt-2 flex gap-2">
-                            <ViewMoreBtn
-                                to={`/projects/${item.id}`}
-                                text="Read More"
-                            />
-                            <ViewMoreBtn
-                                to={`/projects/${item.id}`}
-                                text="Read More"
-                            />
-                        </div>
                     </div>
-                </div>
-            ))}
+                );
+            })}
         </div>
     );
 }

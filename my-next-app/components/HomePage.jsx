@@ -9,8 +9,27 @@ import { getAllWritings } from "../utility/load_writings";
 import WritingsLoad from "./reusable/WritingsLoad";
 
 export default async function HomePage() {
-    const allNews = getAllNews();
-    const news = allNews.slice(0, 3);
+    var allNews = getAllNews();
+
+    allNews.sort((a, b) => {
+        const aDate = a.date.split(" ");
+        const bDate = b.date.split(" ");
+        const aMonth = aDate[0];
+        const bMonth = bDate[0];
+        const aYear = aDate[1];
+        const bYear = bDate[1];
+        if (aYear === bYear) {
+            if (aMonth === bMonth) {
+                return 0;
+            } else {
+                return aMonth > bMonth ? -1 : 1;
+            }
+        } else {
+            return aYear > bYear ? -1 : 1;
+        }
+    });
+
+    var news = allNews.slice(0, 3);
 
     const allWritings = getAllWritings();
     const writings = allWritings.slice(0, 2);

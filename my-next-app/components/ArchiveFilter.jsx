@@ -10,27 +10,39 @@ export default function ArchiveFilter() {
                 <div className="flex flex-col items-center gap-2">
                     <Link
                         href={`/archive/machine-learning`}
-                        className="category-box hover-scale"
+                        className="category-box hover-scale flex justify-between items-center"
                     >
-                        Machine Learning
+                        <span>Machine Learning</span>{" "}
+                        <span ClassName="">
+                            <b>&rarr;</b>
+                        </span>
                     </Link>
                     <Link
                         href={`/archive/math`}
-                        className="category-box hover-scale"
+                        className="category-box hover-scale flex justify-between items-center"
                     >
-                        Math
+                        <span>Math</span>{" "}
+                        <span ClassName="">
+                            <b>&rarr;</b>
+                        </span>
                     </Link>
                     <Link
                         href={`/archive/general-programming`}
-                        className="category-box hover-scale"
+                        className="category-box hover-scale flex justify-between items-center"
                     >
-                        General Programming
+                        <span>General Programming</span>{" "}
+                        <span ClassName="">
+                            <b>&rarr;</b>
+                        </span>
                     </Link>
                     <Link
                         href={`/archive/other`}
-                        className="category-box hover-scale"
+                        className="category-box hover-scale flex justify-between items-center"
                     >
-                        Other
+                        <span>Other</span>{" "}
+                        <span ClassName="">
+                            <b>&rarr;</b>
+                        </span>
                     </Link>
                 </div>
             </div>

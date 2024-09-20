@@ -42,11 +42,14 @@ export default function RootLayout({ children }) {
                 <link rel="#" href="#" />
             </head>
             <body className="font-carme min-h-screen flex flex-col">
-                <Navbar />
-                <main className="flex-grow w-[380px] min-[700px]:w-[600px] my-16 mx-auto max-[600px]:mb-24">
-                    {/* <Filepath /> */}
-                    {children}
-                </main>
+                <div className="overflow-scroll h-full">
+                    <Navbar />
+                    <main className="flex-grow w-[380px] nav_break_2:w-[600px] my-16 mx-auto max-[600px]:mb-24">
+                        {/* <Filepath /> */}
+                        {children}
+                    </main>
+                </div>
+
                 <footer className="">
                     <Footer />
                 </footer>

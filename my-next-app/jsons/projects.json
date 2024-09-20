@@ -9,11 +9,50 @@
         "links": [
             {
                 "name": "GitHub",
-                "url": ""}
-        ]
+                "url": ""},
+            {
+                "name": "Report",
+                "url": ""},
+            {
+                "name": "Read More",
+                "url": ""
+            }
+        ],
+        "highlighted": true
     },
     {
         "id": 2,
+        "name": "Toolgether: Tool Sharing Platform",
+        "type": "personal",
+        "stack": ["Django", "HTML", "CSS", "Bootstrap"],
+        "brief": "A community tool lending platform featuring user authentication, tool proximity map, and a tool request system. Developed within a team for a group project.",
+        "image": "placeholder.jpg",
+        "links": [
+            {
+                "name": "Read More",
+                "url": ""}
+        ],
+        "highlighted": false
+    },
+    {
+        "id": 3,
+        "name": "Football Manager 23 Image Importer",
+        "type": "personal",
+        "stack": ["Python", "ElementTree XML", "PyInstaller"],
+        "brief": "A user-friendly python GUI application featuring file uploads and XML configuration file generation. Add player faces or logos into Football Manager with ease.",
+        "image": "placeholder.jpg",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/Loic017/Football-Manager-Face-and-Logo-Importer"},
+            {
+                "name": "Read More",
+                "url": ""}
+        ],
+        "highlighted": true
+    },
+    {
+        "id": 4,
         "name": "My Website",
         "type": "personal",
         "stack": ["Next.js", "Tailwind"],
@@ -24,8 +63,9 @@
                 "name": "GitHub",
                 "url": ""},
             {
-                "name": "Link",
+                "name": "Read More",
                 "url": ""}
-        ]
+        ],
+        "highlighted": false
     }
 ]

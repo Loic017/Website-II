@@ -26,5 +26,12 @@
         "title": "Accepted to MobiUK 2024 Symposium",
         "text": "My extended abstract on 'Epileptic seizure detection with Tiny Machine Learning' has been accepted to the MobiUK 2024 Symposium.",
         "content": ""
+    },
+    {
+        "id": 5,
+        "date": "September 2024",
+        "title": "Accepted to ACM EIFCom'24 workshop",
+        "text": "The paper I co-authored, 'Stress quantification with an EEG-based foundation model,' has been accepted to the ACM EIFCom'24 workshop.",
+        "content": ""
     }
 ]
