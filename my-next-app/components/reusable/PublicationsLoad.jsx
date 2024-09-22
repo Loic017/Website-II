@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import ViewMoreBtn from "../ViewMoreBtn";
 
 export default function PublicationsLoad({ publications = [] }) {
     return (
@@ -7,14 +8,14 @@ export default function PublicationsLoad({ publications = [] }) {
             {publications.map((item, index) => (
                 <div
                     key={index}
-                    className="flex flex-col px-3 py-3 rounded-md gap-2 nav-back"
+                    className="flex flex-col px-3 py-3 rounded-md gap-2 nav-back border-2 border-white border-opacity-20"
                 >
-                    <p className="small-caps text-red-200 text-lg border-b-2 border-white border-opacity-20 pb-2">
+                    <h2 className="small-caps text-lg border-b-2 border-white border-opacity-20 pb-2">
                         <b>{item.title}</b>
-                    </p>
+                    </h2>
 
                     <p className="">
-                        <span className="text-red-200 small-caps">
+                        <span className="small-caps">
                             <b>{item.venue.name}</b>
                         </span>{" "}
                         - {item.venue.full_name}
@@ -23,17 +24,18 @@ export default function PublicationsLoad({ publications = [] }) {
                         {item.authors.map((author, index) => (
                             <span key={index} className="text-smd">
                                 {author}
+                                {item.authors.length - 1 !== index && (
+                                    <span className="">,</span>
+                                )}
                             </span>
                         ))}
                     </p>
-                    <Link
-                        href={item.link}
-                        className="hover:underline self-end"
-                        target={"_blank"}
-                        rel={"noopener noreferrer"}
-                    >
-                        <b>View →</b>
-                    </Link>
+                    <ViewMoreBtn
+                        to={item.link}
+                        text="View →"
+                        className=""
+                        external={true}
+                    />
                 </div>
             ))}
         </div>

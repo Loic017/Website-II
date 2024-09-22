@@ -7,7 +7,7 @@ const Page = () => {
 
     return (
         <div>
-            <h1 className="heading1">Projects</h1>
+            <h1 className="heading1">projects</h1>
             <p className="paragraph1">
                 A collection of projects I have worked on for various purposes
                 including learning, research, and fun.

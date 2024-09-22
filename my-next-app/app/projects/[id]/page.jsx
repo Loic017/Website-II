@@ -16,10 +16,10 @@ import {
     code_style,
     ol_style,
 } from "../../../components/CustomMd";
+import remarkGfm from "remark-gfm";
 
 import { getAllProjects } from "../../../utility/load_projects";
 import ProjectsLoad from "../../../components/reusable/ProjectsLoad";
-import remarkGfm from "remark-gfm";
 import Link from "next/link";
 
 export default async function Page({ params }) {
@@ -42,7 +42,7 @@ export default async function Page({ params }) {
     return (
         <div className="">
             <div className="flex flex-row items-center justify-between">
-                <Link href="/news" className="text-lg hover:underline">
+                <Link href="/projects" className="text-lg hover:underline">
                     ← Back
                 </Link>
                 <p className=".paragraph1-nomy">{matchNews.date}</p>

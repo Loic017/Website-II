@@ -72,7 +72,7 @@ export default function Navbar() {
                 <div className="text-left nav-back min-h-[37px] flex flex-col justify-center font-bold"></div>
 
                 <div className="text-left h-full space-y-1 nav-back flex flex-col z-20">
-                    <div className="flex flex-col gap-7 flex-grow">
+                    <div className="flex flex-col gap-4 flex-grow">
                         {sections.map((section, index) => (
                             <div key={index}>
                                 <h4 className="nav-heading">{section}</h4>

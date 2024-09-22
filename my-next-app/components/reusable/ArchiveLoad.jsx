@@ -23,7 +23,7 @@ export default function ArchiveLoad({ archive = [] }) {
                             width={100}
                             height={100}
                         />
-                        <span ClassName="">
+                        <span className="">
                             <b>&rarr;</b>
                         </span>
                     </div>

@@ -30,7 +30,10 @@ export default async function Page({ params }) {
     return (
         <div className="">
             <div className="flex flex-row items-center justify-between">
-                <Link href="/news" className="text-lg hover:underline">
+                <Link
+                    href={`/archive/${matchNews.category}`}
+                    className="text-lg hover:underline"
+                >
                     ← Back
                 </Link>
                 <p className=".paragraph1-nomy">{matchNews.date}</p>

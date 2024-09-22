@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import ViewMoreBtn from "../ViewMoreBtn";
 
 export default function NewsLoad({ news = [] }) {
     news.sort((a, b) => {
@@ -25,7 +26,7 @@ export default function NewsLoad({ news = [] }) {
             {news.map((item, index) => (
                 <div
                     key={index}
-                    className="flex flex-col nav-back p-5 rounded-md hover-scale"
+                    className="flex flex-col nav-back p-5 rounded-md border-2 border-white border-opacity-20"
                 >
                     <h2 className="small-caps pb-2">
                         <span className="mr-2 italic border-r-2 border-white border-opacity-50 pr-2">
@@ -35,14 +36,13 @@ export default function NewsLoad({ news = [] }) {
                     </h2>
                     <p className="news-paragraph flex flex-col">
                         {item.text}
-                        <span className="flex w-full justify-end">
+                        <span className="flex w-full justify-center pt-4">
                             {/* <hr className="w-full my-3 border-t-2 border-gray-300 border-opacity-50" /> */}
-                            <Link
-                                className="underline italic text-right"
-                                href={`/news/${item.id}`}
-                            >
-                                Read More
-                            </Link>
+                            <ViewMoreBtn
+                                to={`/news/${item.id}`}
+                                text="Read More"
+                                className=""
+                            />
                         </span>
                     </p>
                 </div>

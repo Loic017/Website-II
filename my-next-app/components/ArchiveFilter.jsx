@@ -13,7 +13,7 @@ export default function ArchiveFilter() {
                         className="category-box hover-scale flex justify-between items-center"
                     >
                         <span>Machine Learning</span>{" "}
-                        <span ClassName="">
+                        <span className="">
                             <b>&rarr;</b>
                         </span>
                     </Link>
@@ -22,7 +22,7 @@ export default function ArchiveFilter() {
                         className="category-box hover-scale flex justify-between items-center"
                     >
                         <span>Math</span>{" "}
-                        <span ClassName="">
+                        <span className="">
                             <b>&rarr;</b>
                         </span>
                     </Link>
@@ -31,7 +31,7 @@ export default function ArchiveFilter() {
                         className="category-box hover-scale flex justify-between items-center"
                     >
                         <span>General Programming</span>{" "}
-                        <span ClassName="">
+                        <span className="">
                             <b>&rarr;</b>
                         </span>
                     </Link>
@@ -40,7 +40,7 @@ export default function ArchiveFilter() {
                         className="category-box hover-scale flex justify-between items-center"
                     >
                         <span>Other</span>{" "}
-                        <span ClassName="">
+                        <span className="">
                             <b>&rarr;</b>
                         </span>
                     </Link>
