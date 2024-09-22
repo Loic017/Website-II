@@ -35,7 +35,7 @@ body {
 }
 
 .heading2 {
-    @apply text-[1.5rem] w-full mt-1 mb-2 pb-2 font-semibold;
+    @apply text-[1.5rem] w-full my-1 pb-1 font-semibold;
     font-variant: small-caps;
 }
 

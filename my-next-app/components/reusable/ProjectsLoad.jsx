@@ -38,8 +38,8 @@ export default function ProjectsLoad({ projects = [] }) {
                                     src={`/images/${item.image}`}
                                     alt={item.name}
                                     className="rounded-md object-cover w-full h-full"
-                                    width={50}
-                                    height={50}
+                                    width={1000}
+                                    height={500}
                                 />
                             </div>
                             <div className="flex flex-col gap-3 w-full">
@@ -49,7 +49,7 @@ export default function ProjectsLoad({ projects = [] }) {
                                     </h2>
                                 </div>
                                 {isHighlighted && (
-                                    <p className="flex items-center text-center rounded-md overflow-scroll">
+                                    <p className="flex items-center text-center rounded-md">
                                         <span className="flex gap-2 text-sm">
                                             {item.stack.map((tech, index) => (
                                                 <span
@@ -66,7 +66,7 @@ export default function ProjectsLoad({ projects = [] }) {
                         </div>
                         <div className="flex flex-col w-full">
                             {!isHighlighted && (
-                                <p className="flex items-center text-center rounded-md overflow-scroll pt-2">
+                                <p className="flex items-center text-center rounded-md pt-2">
                                     <span className="flex gap-2 text-sm">
                                         {item.stack.map((tech, index) => (
                                             <span
@@ -85,7 +85,7 @@ export default function ProjectsLoad({ projects = [] }) {
                                     link.name === "Read More" ? (
                                         <ViewMoreBtn
                                             key={index}
-                                            to={`/research/${item.id}`}
+                                            to={`/projects/${item.id}`}
                                             text={link.name}
                                             className="w-full"
                                         />
@@ -104,6 +104,7 @@ export default function ProjectsLoad({ projects = [] }) {
                                                     to={link.url}
                                                     text={link.name}
                                                     className=""
+                                                    external={true}
                                                 />
                                             ))}
                                     </div>

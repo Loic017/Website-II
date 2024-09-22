@@ -4,6 +4,7 @@ import Image from "next/image";
 import banner from "../app/banner.png";
 import React, { useState, useEffect } from "react";
 import Filepath from "../components/Filepath";
+import Progress from "../components/Progress";
 
 import { FaArrowLeft } from "react-icons/fa";
 import { FaHamburger } from "react-icons/fa";

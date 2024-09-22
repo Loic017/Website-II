@@ -5,14 +5,14 @@
         "type": "research",
         "stack": ["Python", "PyTorch"],
         "brief": "A study exploring the development and implementation of efficient Tiny Machine Learning models for the detection of epileptic seizures on an Arduino Platform.",
-        "image": "placeholder.jpg",
+        "image": "tinymlseizure.webp",
         "links": [
             {
                 "name": "GitHub",
-                "url": ""},
+                "url": "https://github.com/Loic017/Epileptic-seizure-detection-with-Tiny-Machine-Learning"},
             {
-                "name": "Report",
-                "url": ""},
+                "name": "Dissertation Report",
+                "url": "https://drive.google.com/file/d/1W1lrBvBA_GrSyujQJyJSLgKLstS-cuaG/view?usp=sharing"},
             {
                 "name": "Read More",
                 "url": ""
@@ -61,7 +61,7 @@
         "links": [
             {
                 "name": "GitHub",
-                "url": ""},
+                "url": "https://github.com/Loic017/Website-II"},
             {
                 "name": "Read More",
                 "url": ""}
