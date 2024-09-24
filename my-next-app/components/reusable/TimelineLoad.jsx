@@ -13,7 +13,7 @@ export default function TimelineLoad({ timeline = [] }) {
                             <div className="bg-gray-500 w-1 h-6 mx-auto"></div>
                         </div>
                     )}
-                    <div className="flex flex-col nav-back p-5 rounded-md hover-scale">
+                    <div className="flex flex-col nav-back p-5 rounded-md">
                         <p className="small-caps min-[700px]:pb-1 min-[700px]:mb-2">
                             <span className="italic border-r-2 border-white border-opacity-50 mr-2 pr-2 ">
                                 <b>

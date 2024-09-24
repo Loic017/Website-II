@@ -16,7 +16,7 @@ export const p_style = ({ children }) => (
 export const link_style = ({ href, children }) => (
     <Link
         href={href}
-        className="text-blue-400 underline hover:italic"
+        className="text-blue-400 underline hover:text-blue-500"
         target="_blank"
     >
         {children}
@@ -51,4 +51,12 @@ export const code_style = ({ children }) => (
     <pre className="nav-back text-white p-4 rounded-md text-wrap my-4">
         <code>{children}</code>
     </pre>
+);
+
+export const img_style = ({ src, alt }) => (
+    <img
+        src={src}
+        alt={alt}
+        className="rounded-sm border-l-2 pl-2 my-5 w-[500px]"
+    />
 );

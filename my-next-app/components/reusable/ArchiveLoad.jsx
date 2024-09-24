@@ -11,18 +11,20 @@ export default function ArchiveLoad({ archive = [] }) {
                     key={index}
                     className="category-box hover-scale flex justify-between items-center"
                 >
-                    <div>
+                    <div className="pr-4">
                         <h2 className="heading2">{item.title}</h2>
-                        <p className="paragraph1">{item.brief}</p>
+                        <p className="paragraph1-nojustify">{item.brief}</p>
                     </div>
                     <div className="flex flex-row items-center gap-5">
-                        <Image
-                            src={`/images/${item.image}`}
-                            alt={item.title}
-                            className="rounded-sm"
-                            width={100}
-                            height={100}
-                        />
+                        <div className="relative h-[100px] w-[100px]">
+                            <Image
+                                src={`/images/${item.image}`}
+                                alt={item.title}
+                                className="rounded-sm object-cover"
+                                layout="fill"
+                                objectFit="cover"
+                            />
+                        </div>
                         <span className="">
                             <b>&rarr;</b>
                         </span>

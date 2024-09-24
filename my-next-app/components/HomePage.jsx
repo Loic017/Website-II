@@ -41,7 +41,7 @@ export default async function HomePage() {
                 <p className="paragraph1">
                     Hi, I am Loic - a recent computer science graduate from
                     Cardiff University. To find out more about me, go to the{" "}
-                    <Link href="" className="underline hover:italic">
+                    <Link href="/info" className="underline hover:italic">
                         info page
                     </Link>
                     .
@@ -63,7 +63,7 @@ export default async function HomePage() {
                     continuously be updated with new information. For any
                     missing pages, alternatives may be found on my old website{" "}
                     <Link
-                        href="lorentel.vercel.app"
+                        href="https://www.lorentel.vercel.app"
                         className="underline hover:italic"
                     >
                         here

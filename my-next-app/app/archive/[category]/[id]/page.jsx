@@ -3,7 +3,21 @@ import {
     getAllArticleIds,
 } from "../../../../utility/load_archive";
 import ReactMarkdown from "react-markdown";
-import { h1_style, h2_style, p_style } from "../../../../components/CustomMd";
+import {
+    h1_style,
+    h2_style,
+    p_style,
+    link_style,
+    ul_style,
+    li_style,
+    table_style,
+    th_style,
+    td_style,
+    code_style,
+    ol_style,
+    img_style,
+} from "../../../../components/CustomMd";
+import remarkGfm from "remark-gfm";
 
 import { getAllArchive } from "../../../../utility/load_archives";
 import ArchiveLoad from "../../../../components/reusable/ArchiveLoad";
@@ -49,7 +63,17 @@ export default async function Page({ params }) {
                         h1: h1_style,
                         h2: h2_style,
                         p: p_style,
+                        a: link_style,
+                        ul: ul_style,
+                        li: li_style,
+                        table: table_style,
+                        th: th_style,
+                        td: td_style,
+                        code: code_style,
+                        ol: ol_style,
+                        img: img_style,
                     }}
+                    remarkPlugins={[remarkGfm]}
                 >
                     {articleData.contentMarkdown}
                 </ReactMarkdown>

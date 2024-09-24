@@ -5,7 +5,7 @@
     "title": "100 Page ML Book",
     "brief": "Good ML book",
     "link": "www.google.com",
-    "image": "placeholder.jpg"
+    "image": "100-page.jpg"
     
 },
 {
@@ -14,6 +14,14 @@
     "title": "Professor Leonard",
     "brief": "One of the best professors I have ever watched.",
     "link": "www.google.com",
-    "image": "placeholder.jpg"
+    "image": "prof-leonard.jpg"
+},
+{
+    "id": 3,
+    "category": "other",
+    "title": "Atomic Habits",
+    "brief": "A highly recommended book by others, which I somewhat agree with.",
+    "link": "www.google.com",
+    "image": "atomic-habits.jpg"
 }
 ]

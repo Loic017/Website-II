@@ -15,6 +15,7 @@ import {
     td_style,
     code_style,
     ol_style,
+    img_style,
 } from "../../../components/CustomMd";
 import remarkGfm from "remark-gfm";
 
@@ -67,6 +68,7 @@ export default async function Page({ params }) {
                         td: td_style,
                         code: code_style,
                         ol: ol_style,
+                        img: img_style,
                     }}
                     remarkPlugins={[remarkGfm]}
                 >

@@ -56,6 +56,10 @@ body {
     @apply text-justify my-2;
 }
 
+.paragraph1-nojustify {
+    @apply my-2;
+}
+
 .paragraph1-nomy {
     @apply text-justify;
 }
