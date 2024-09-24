@@ -85,7 +85,7 @@ export default function ProjectsLoad({ projects = [] }) {
                                     link.name === "Read More" ? (
                                         <ViewMoreBtn
                                             key={index}
-                                            to={`/research/${item.id}`}
+                                            to={`/projects/${item.id}`}
                                             text={link.name}
                                             className="w-full"
                                         />

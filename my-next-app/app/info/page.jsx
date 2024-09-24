@@ -28,7 +28,7 @@ const Page = () => {
                 Currently, I am self-studying maths and machine learning. I am
                 pursuing an MPhil and aim to start a PhD in the future.
             </p>
-            <h1 className="heading1">technologies</h1>
+            <h1 className="heading1">technical skills</h1>
             <p className="paragraph1">
                 While I am continuously learning new technologies, the following
                 list includes some of the <i>key</i> technologies I have worked
@@ -54,6 +54,7 @@ const Page = () => {
                 <li>Next.js</li>
                 <li>Tailwind</li>
             </ul>
+
             <h1 className="heading1">awards</h1>
             <ul className="flex flex-col min-[700px]:flex-row min-[700px]:gap-5 my-2">
                 <Awards />
