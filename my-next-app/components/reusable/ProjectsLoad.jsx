@@ -17,8 +17,8 @@ export default function ProjectsLoad({ projects = [] }) {
                 const brief = isHighlighted
                     ? item.brief
                     : item.brief.split(" ").slice(0, 10).join(" ") + "...";
-                const imageHeight = isHighlighted ? "h-40" : "h-full";
-                const imageWidth = isHighlighted ? "w-full" : "w-20";
+                const imageHeight = isHighlighted ? "h-40" : "h-20";
+                const imageWidth = isHighlighted ? "w-full" : "w-30";
                 const containerClass = isHighlighted
                     ? "flex-col items-center gap-2"
                     : "flex-row items-start gap-3";

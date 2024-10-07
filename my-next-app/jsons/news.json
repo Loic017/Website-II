@@ -33,5 +33,12 @@
         "title": "Accepted to ACM EIFCom'24 workshop",
         "text": "The paper I co-authored, 'Stress quantification with an EEG-based foundation model,' has been accepted to the ACM EIFCom'24 workshop.",
         "content": ""
+    },
+    {
+        "id": 6,
+        "date": "October 2024",
+        "title": "MPhil Computer Science @ Cardiff University",
+        "text": "I have been accepted to and started the MPhil program in Computer Science at Cardiff University. My research is on 'Vehicle CAN (Controller Area Network) On-Board Security Operations Center (SOC).' and is supervised by Dr. Amir Javed and Dr. Nhat (Nick) Pham. The project is funded by Thales Group.",
+        "content": ""
     }
 ]

@@ -26,7 +26,7 @@
         "type": "personal",
         "stack": ["Django", "HTML", "CSS", "Bootstrap"],
         "brief": "A community tool lending platform featuring user authentication, tool proximity map, and a tool request system. Developed within a team for a group project.",
-        "image": "placeholder.jpg",
+        "image": "toolgether-banner.png",
         "links": [
             {
                 "name": "Read More",
@@ -40,7 +40,7 @@
         "type": "personal",
         "stack": ["Python", "Tkinter", "PyInstaller"],
         "brief": "A user-friendly python GUI application featuring file uploads and XML configuration file generation. Add player faces or logos into Football Manager with ease.",
-        "image": "placeholder.jpg",
+        "image": "fm-banner.png",
         "links": [
             {
                 "name": "GitHub",

@@ -248,11 +248,11 @@ const pages = [
     },
     {
         page_name: "Email",
-        href: "/c",
+        href: "mailto:reachloic@gmail.com",
         section: "Links",
         icon: MdEmail,
         external: true,
-        enabled: false,
+        enabled: true,
     },
     {
         page_name: "Resumse / CV",

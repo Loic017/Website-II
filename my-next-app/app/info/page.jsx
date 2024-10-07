@@ -9,10 +9,10 @@ const Page = () => {
         <div className="flex flex-col">
             <h1 className="heading1">about me</h1>
             <p className="paragraph1">
-                <b>Hello there, I&apos;m Loic.</b> I am a recent computer
-                science graduate. While computer science is an active hobby of
-                mine, my personal interests also include music, sport, and
-                history.
+                <b>Hello there, I&apos;m Loic.</b> I am an MPhil student at
+                Cardiff University and a recent computer science graduate. While
+                computer science is an active hobby of mine, my personal
+                interests also include music, sport, and history.
             </p>
             <p className="paragraph1">
                 I have experience working with different mediums, from web
